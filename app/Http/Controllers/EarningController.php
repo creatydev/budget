@@ -17,6 +17,15 @@ class EarningController extends Controller {
         ];
     }
 
+    public function show(Request $request, Earning $earning)
+    {
+        $this->authorize('view', $earning);
+
+        return view('earnings.show', [
+            'earning' => $earning
+        ]);
+    }
+
     public function create() {
         return view('earnings.create');
     }
