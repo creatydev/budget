@@ -10,5 +10,6 @@
                 Hello world
             </div>
         </div>
+        @include('partials.attachments', ['payload' => $spending])
     </div>
 @endsection
